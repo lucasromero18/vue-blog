@@ -16,8 +16,8 @@ export default {
   data(){
     //SETTING THINGS THAT WILL CHANGE (KIND OF LIKE STATE)
     return{
-    blogs: [],
-    search: ""
+        blogs: [],
+        search: ""
     }
   },
   methods:{

@@ -4,7 +4,7 @@
     <h1>All Blog Articles</h1>
     <input type="text" v-model="search" placeholder="search blogs" />
     <div v-for="blog in filteredBlogs" class="single-blog">
-    <h2 v-randomColor>{{ blog.title | toUppercase }}</h2>
+    <router-link v-bind:to="'/blog/' + blog.id"><h2 v-randomColor>{{ blog.title | toUppercase }}</h2></router-link>
     <article>{{ blog.body | snippet  }}</article>
     </div>
   </div>
@@ -18,8 +18,8 @@ export default {
   data(){
     //SETTING THINGS THAT WILL CHANGE (KIND OF LIKE STATE)
     return{
-    blogs: [],
-    search: ""
+        blogs: [],
+        search: ""
     }
   },
   methods:{

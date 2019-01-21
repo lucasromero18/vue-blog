@@ -2,6 +2,7 @@
 // USING <router-view></router-view> WILL RENDER ALL COMPONENTS UNDER ROUTES
 <template>    
   <div>
+  <app-header></app-header>
   <router-view></router-view>
   </div>
 </template>
@@ -13,13 +14,15 @@
 import addBlog from './components/addBlog.vue';
 import showBlogs from './components/showBlogs.vue';
 import listBlogs from './components/listBlogs.vue'
+import Header from './components/Header.vue'
 
 export default {
 //DEFINING WHICH CHILD COMPONENTS WERE EXPORTING
     components: {
     'addBlog': addBlog,
     'showBlogs': showBlogs,
-    'listBlogs': listBlogs
+    'listBlogs': listBlogs,
+    'app-header': Header
   },
   data(){
     return{
